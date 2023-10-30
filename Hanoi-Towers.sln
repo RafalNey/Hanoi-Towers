@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hanoi-Towers", "Hanoi-Towers.csproj", "{4A52EFD5-0083-43BF-9666-0AD94C7EEE12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hanoi-Towers.Tests", "Hanoi-Towers.Tests\Hanoi-Towers.Tests.csproj", "{B95921E8-5564-4822-9E5B-6C4B2FE543FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4A52EFD5-0083-43BF-9666-0AD94C7EEE12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A52EFD5-0083-43BF-9666-0AD94C7EEE12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A52EFD5-0083-43BF-9666-0AD94C7EEE12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B95921E8-5564-4822-9E5B-6C4B2FE543FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B95921E8-5564-4822-9E5B-6C4B2FE543FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B95921E8-5564-4822-9E5B-6C4B2FE543FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B95921E8-5564-4822-9E5B-6C4B2FE543FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
