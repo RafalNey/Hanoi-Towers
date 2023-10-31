@@ -1,4 +1,4 @@
-namespace Hanoi_Towers.Tests
+namespace HanoiTowers.Tests
 {
     public class Tests
     {
@@ -6,6 +6,11 @@ namespace Hanoi_Towers.Tests
         [Test]
         public void Test1()
         {
+            //arrange
+
+            //act
+
+            //assert
             Assert.Pass();
         }
     }
