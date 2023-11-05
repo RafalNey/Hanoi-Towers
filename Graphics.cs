@@ -1,75 +1,112 @@
 namespace HanoiTowers
-// Komponent graficzny
 {
-    public class Graphics
+    public class Graphics // Komponenty graficzne
     {
-        public static void TopA()
+        public static string top = "                __                ";
+        public static string ringA0 = "               |  |               ";
+        public static string ringB0 = "               |  |               ";
+        public static string ringA1 = "             __|__|__             ";
+        public static string ringB1 = "            |████████|            ";
+        public static string ringA2 = "           ____|__|____           ";
+        public static string ringB2 = "          |████████████|          ";
+        public static string ringA3 = "         ______|__|______         ";
+        public static string ringB3 = "        |████████████████|        ";
+        public static string ringA4 = "       ________|__|________       ";
+        public static string ringB4 = "      |████████████████████|      ";
+        public static string ringA5 = "     __________|__|__________     ";
+        public static string ringB5 = "    |████████████████████████|    ";
+        public static string ringA6 = "   ____________|__|____________   ";
+        public static string ringB6 = "  |████████████████████████████|  ";
+        public static string ringA7 = " ______________|__|______________ ";
+        public static string ringB7 = "|████████████████████████████████|";
+        public static string floor = "_______________|__|_______________";
+        public static string floorA1 = "                ██╗               ";
+        public static string floorA2 = "              ████║               ";
+        public static string floorA3 = "              ╚═██║               ";
+        public static string floorA4 = "                ██║               ";
+        public static string floorA5 = "                ██║               ";
+        public static string floorA6 = "                ╚═╝               ";
+        public static string floorB1 = "              █████╗              ";
+        public static string floorB2 = "              ╚═══██╗             ";
+        public static string floorB3 = "               ████╔╝             ";
+        public static string floorB4 = "              ██╔══╝              ";
+        public static string floorB5 = "              ██████╗             ";
+        public static string floorB6 = "              ╚═════╝             ";
+        public static string floorC1 = "              █████╗              ";
+        public static string floorC2 = "              ╚═══██╗             ";
+        public static string floorC3 = "               ████╔╝             ";
+        public static string floorC4 = "               ╚══██╗             ";
+        public static string floorC5 = "              █████╔╝             ";
+        public static string floorC6 = "              ╚════╝              ";
+
+        public static void GreetingsScreen()
         {
-            Console.WriteLine("               __               ");
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine(" Witaj w grze:");
+            Console.WriteLine();
+            Console.WriteLine("       ██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ██╗        ");
+            Console.WriteLine("       ██║  ██║██╔══██╗████╗  ██║██╔═══██╗██║        ");
+            Console.WriteLine("       ███████║███████║██╔██╗ ██║██║   ██║██║        ");
+            Console.WriteLine("       ██╔══██║██╔══██║██║╚██╗██║██║   ██║██║        ");
+            Console.WriteLine("       ██║  ██║██║  ██║██║ ╚████║╚██████╔╝██║        ");
+            Console.WriteLine("       ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝        ");
+            Console.WriteLine("████████╗ ██████╗ ██╗    ██╗███████╗██████╗ ███████╗ ");
+            Console.WriteLine("╚══██╔══╝██╔═══██╗██║    ██║██╔════╝██╔══██╗██╔════╝ ");
+            Console.WriteLine("   ██║   ██║   ██║██║ █╗ ██║█████╗  ██████╔╝███████╗ ");
+            Console.WriteLine("   ██║   ██║   ██║██║███╗██║██╔══╝  ██╔══██╗╚════██║ ");
+            Console.WriteLine("   ██║   ╚██████╔╝╚███╔███╔╝███████╗██║  ██║███████║ ");
+            Console.WriteLine("   ╚═╝    ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚══════╝ ");
+            Console.WriteLine();
+            Console.WriteLine("    Wybierz proszę:");
+            Console.WriteLine("    ===============");
+            Console.WriteLine();
+            Console.WriteLine("1 - Wiem już wszystko, chcę od razu zagrać.");
+            Console.WriteLine("2 - Chcę poznać historię i zasady gry.");
+            Console.WriteLine();
         }
-        public static void TopB()
+        public static void GameOver()
         {
-            Console.WriteLine("              |  |              ");
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine(" ██████╗  █████╗ ███╗   ███╗███████╗     ██████╗ ██╗   ██╗███████╗██████╗ ");
+            Console.WriteLine("██╔════╝ ██╔══██╗████╗ ████║██╔════╝    ██╔═══██╗██║   ██║██╔════╝██╔══██╗");
+            Console.WriteLine("██║  ███╗███████║██╔████╔██║█████╗      ██║   ██║██║   ██║█████╗  ██████╔╝");
+            Console.WriteLine("██║   ██║██╔══██║██║╚██╔╝██║██╔══╝      ██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗");
+            Console.WriteLine("╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗    ╚██████╔╝ ╚████╔╝ ███████╗██║  ██║");
+            Console.WriteLine(" ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝     ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝");
+            Console.WriteLine();
         }
-        public static void StickA()
+        public static void Congratulation()
         {
-            Console.WriteLine("              |  |              ");
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine(" ██████╗ ██████╗  █████╗ ████████╗██╗   ██╗██╗      █████╗  ██████╗     ██╗███████╗ ");
+            Console.WriteLine("██╔════╝ ██╔══██╗██╔══██╗╚══██╔══╝██║   ██║██║     ██╔══██╗██╔════╝     ██║██╔════╝ ");
+            Console.WriteLine("██║  ███╗██████╔╝███████║   ██║   ██║   ██║██║     ███████║██║          ██║█████╗   ");
+            Console.WriteLine("██║   ██║██╔══██╗██╔══██║   ██║   ██║   ██║██║     ██╔══██║██║     ██   ██║██╔══╝   ");
+            Console.WriteLine("╚██████╔╝██║  ██║██║  ██║   ██║   ╚██████╔╝███████╗██║  ██║╚██████╗╚█████╔╝███████╗ ");
+            Console.WriteLine(" ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚════╝ ╚══════╝ ");
+            Console.WriteLine();
+            Console.WriteLine("███╗   ██╗███████╗██╗    ██╗   ██████╗ ███████╗ ██████╗ ██████╗ ██████╗ ██████╗ ██╗");
+            Console.WriteLine("████╗  ██║██╔════╝██║    ██║   ██╔══██╗██╔════╝██╔════╝██╔═══██╗██╔══██╗██╔══██╗██║");
+            Console.WriteLine("██╔██╗ ██║█████╗  ██║ █╗ ██║   ██████╔╝█████╗  ██║     ██║   ██║██████╔╝██║  ██║██║");
+            Console.WriteLine("██║╚██╗██║██╔══╝  ██║███╗██║   ██╔══██╗██╔══╝  ██║     ██║   ██║██╔══██╗██║  ██║╚═╝");
+            Console.WriteLine("██║ ╚████║███████╗╚███╔███╔╝   ██║  ██║███████╗╚██████╗╚██████╔╝██║  ██║██████╔╝██╗");
+            Console.WriteLine("╚═╝  ╚═══╝╚══════╝ ╚══╝╚══╝    ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝");
+            Console.WriteLine();
         }
-        public static void StickB()
+        public static void ChooseLevelScreen()
         {
-            Console.WriteLine("              |  |              ");
-        }
-        public static void Ring1A()
-        {
-            Console.WriteLine("            __|__|__            ");
-        }
-        public static void Ring1B()
-        {
-            Console.WriteLine("           |________|           ");
-        }
-        public static void Ring2A()
-        {
-            Console.WriteLine("          ____|__|____          ");
-        }
-        public static void Ring2B()
-        {
-            Console.WriteLine("         |____________|         ");
-        }
-        public static void Ring3A()
-        {
-            Console.WriteLine("        ______|__|______        ");
-        }
-        public static void Ring3B()
-        {
-            Console.WriteLine("       |________________|       ");
-        }
-        public static void Ring4A()
-        {
-            Console.WriteLine("      ________|__|________      ");
-        }
-        public static void Ring4B()
-        {
-            Console.WriteLine("     |____________________|     ");
-        }
-        public static void Ring5A()
-        {
-            Console.WriteLine("    __________|__|__________    ");
-        }
-        public static void Ring5B()
-        {
-            Console.WriteLine("   |________________________|   ");
-        }
-        public static void Ring6A()
-        {
-            Console.WriteLine("  ____________|__|____________  ");
-        }
-        public static void Ring6B()
-        {
-            Console.WriteLine(" |____________________________| ");
-        }
-        public static void floor()
-        {
-            Console.WriteLine("______________|__|______________");
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine("    Wybierz poziom trudności:");
+            Console.WriteLine("    ==========================");
+            Console.WriteLine();
+            Console.WriteLine("1 - EASY, jak dla dzidziusiow");
+            Console.WriteLine("2 - NORMAL, dla normalnych ludzi");
+            Console.WriteLine("3 - HARD, dla tych, ktorzy lubią film 'Die Hard'");
+            Console.WriteLine();
         }
     }
 }

@@ -2,16 +2,20 @@ namespace HanoiTowers.Tests
 {
     public class Tests
     {
+        static void Main() { }
 
-        [Test]
-        public void Test1()
-        {
-            //arrange
+        /*
+                [Test]
+                public void Test1()
+                {
+                    //arrange
 
-            //act
+                    //act
 
-            //assert
-            Assert.Pass();
-        }
+                    //assert
+                    Assert.Pass();
+                }
+            }
+            */
     }
 }

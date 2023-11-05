@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net7.0/Hanoi-Towers.dll",
+            "program": "${workspaceFolder}/bin/Debug/net7.0/HanoiTowers.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
