@@ -75,5 +75,13 @@ namespace HanoiTowers
             Console.WriteLine("Możesz grać tylko pod tym warunkiem!");
             Console.WriteLine();
         }
+        public static void Salomon()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Hola, hola! Z pustego nawet Salomon nie naleje... ");
+            Console.WriteLine("Wybierz patyk na ktorym jest jakis krazek.");
+            Console.WriteLine();
+
+        }
     }
 }
