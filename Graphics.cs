@@ -63,6 +63,7 @@ namespace HanoiTowers
             Console.WriteLine();
             Console.WriteLine("1 - Wiem już wszystko, chcę od razu zagrać.");
             Console.WriteLine("2 - Chcę poznać historię i zasady gry.");
+            Console.WriteLine("3 - Chcę skasowac wszystkie dotychczasowe rekordy i zaczac od nowa.");
             Console.WriteLine();
         }
         public static void GameOver()
@@ -77,7 +78,7 @@ namespace HanoiTowers
             Console.WriteLine(" ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝     ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝");
             Console.WriteLine();
         }
-        public static void Congratulation()
+        public static void CongratulationNewRecord()
         {
             Console.Clear();
             Console.WriteLine();
@@ -94,6 +95,18 @@ namespace HanoiTowers
             Console.WriteLine("██║╚██╗██║██╔══╝  ██║███╗██║   ██╔══██╗██╔══╝  ██║     ██║   ██║██╔══██╗██║  ██║╚═╝");
             Console.WriteLine("██║ ╚████║███████╗╚███╔███╔╝   ██║  ██║███████╗╚██████╗╚██████╔╝██║  ██║██████╔╝██╗");
             Console.WriteLine("╚═╝  ╚═══╝╚══════╝ ╚══╝╚══╝    ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝");
+            Console.WriteLine();
+        }
+        public static void CongratulationOnly()
+        {
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine(" ██████╗ ██████╗  █████╗ ████████╗██╗   ██╗██╗      █████╗  ██████╗     ██╗███████╗ ");
+            Console.WriteLine("██╔════╝ ██╔══██╗██╔══██╗╚══██╔══╝██║   ██║██║     ██╔══██╗██╔════╝     ██║██╔════╝ ");
+            Console.WriteLine("██║  ███╗██████╔╝███████║   ██║   ██║   ██║██║     ███████║██║          ██║█████╗   ");
+            Console.WriteLine("██║   ██║██╔══██╗██╔══██║   ██║   ██║   ██║██║     ██╔══██║██║     ██   ██║██╔══╝   ");
+            Console.WriteLine("╚██████╔╝██║  ██║██║  ██║   ██║   ╚██████╔╝███████╗██║  ██║╚██████╗╚█████╔╝███████╗ ");
+            Console.WriteLine(" ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚════╝ ╚══════╝ ");
             Console.WriteLine();
         }
         public static void ChooseLevelScreen()

@@ -1,15 +1,8 @@
+using System.Globalization;
 namespace HanoiTowers
 {
     public abstract class Records
     {
-        // Wartosci inicjalne patykow dla wszystkich leveli
-        public static int[] stickFullEasy = new int[] { 1, 1, 2, 3 };
-        public static int[] stickFullNormal = new int[] { 1, 1, 2, 3, 4, 5 };
-        public static int[] stickFullHard = new int[] { 1, 1, 2, 3, 4, 5, 6, 7 };
-        public static int[] stickEmptyEasy = new int[] { 0, 0, 0, 0 };
-        public static int[] stickEmptyNormal = new int[] { 0, 0, 0, 0, 0, 0 };
-        public static int[] stickEmptyHard = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
-
         // nazwy plikow 
         public static string fileNameEasy = "easy.txt";
         public static string fileNameNormal = "normal.txt";
@@ -28,22 +21,27 @@ namespace HanoiTowers
         public static void CompareAndSave(string level, int movesPlayerCount)
         {
             string fileName;
+            int bestOfTheBestRecord;
             int recordOld = 1000;
-            int recordNew = 0;
+            int recordNew;
 
             switch (level)
             {
                 case "1":
                     fileName = fileNameEasy;
+                    bestOfTheBestRecord = minimalRecordEasy;
                     break;
                 case "2":
                     fileName = fileNameNormal;
+                    bestOfTheBestRecord = minimalRecordNormal;
                     break;
                 case "3":
                     fileName = fileNameHard;
+                    bestOfTheBestRecord = minimalRecordHard;
                     break;
                 default:
                     fileName = "";
+                    bestOfTheBestRecord = 0;
                     break;
             }
 
@@ -59,8 +57,33 @@ namespace HanoiTowers
 
             recordNew = Math.Min(recordOld, movesPlayerCount);
 
-            if (recordNew < recordOld)
+            if (movesPlayerCount > recordOld)
             {
+                Graphics.GameOver();
+                Console.WriteLine($"Potrzebowales az {movesPlayerCount} ruchow aby ulozyc te lamiglowke :-(");
+                Console.WriteLine($"Dotychczasowy rekord wynosi {recordOld} ruchow");
+                Console.WriteLine($"Moze sprobujesz jeszcze raz?");
+                Console.WriteLine();
+            }
+            else
+            {
+                if (movesPlayerCount == bestOfTheBestRecord)
+                {
+                    Graphics.CongratulationOnly();
+                    Console.WriteLine($"Osiagnales mistrzostwo tego poziomu! Potrzebowales jedynie {movesPlayerCount} ruchow aby wygrac.");
+                    Console.WriteLine($"Jest to niezbedna, minimalna liczba ruchow potrzeba do ulozenia tej lamigowki.");
+                    Console.WriteLine("Moze sprobujesz teraz na wyzszym poziomie?");
+                    Console.WriteLine();
+                }
+                else
+                {
+                    Graphics.CongratulationNewRecord();
+                    Console.WriteLine($"Potrzebowales jedynie {movesPlayerCount} ruchow aby ulozyc te lamiglowke.");
+                    Console.WriteLine($"Dotychczasowy rekord wynosil {recordOld} ruchow");
+                    Console.WriteLine($"Twoj nowy rekord zostal zapisany. Gratulacje!");
+                    Console.WriteLine($"A moze chcesz go sprobowac pobic i zagrac jeszcze raz?");
+                    Console.WriteLine();
+                }
                 try
                 {
                     File.Delete(fileName);

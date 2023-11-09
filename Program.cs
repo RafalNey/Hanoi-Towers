@@ -20,12 +20,15 @@ do
             Console.ReadKey();
             Console.Clear();
             break;
+        case "3":
+            Records.CreateInicialRecordFiles();
+            break;
         default:
-            Console.WriteLine("Tylko 1 lub 2...");
+            Console.WriteLine("Tylko 1 i 2. W ostatecznosci 3...");
             Thread.Sleep(1000);
             break;
     }
-} while (choice != "1" && choice != "2");
+} while (choice != "1" && choice != "2" && choice != "3");
 
 // Wybor poziomu gry
 int[] stick0 = { 1, 1, 2, 3, 4, 5 };
@@ -57,6 +60,7 @@ do
 } while (choice != "1" && choice != "2" && choice != "3");
 
 string input;
+string inputHelp;
 int ring = 0;
 int movesPlayerCount = 0;
 
@@ -67,6 +71,21 @@ do // GRA WLASCIWA
         GameScreen();
         Console.WriteLine("Z ktorego patyka ( 1, 2, 3 ) chcesz wziac krazek?");
         input = Console.ReadLine();
+
+        if (input == "Q" || input == "q")
+        {
+            return;
+        }
+        if (input == "H" || input == "h")
+        {
+            Texts.HelpA();
+            inputHelp = Console.ReadLine();
+            if (inputHelp == "H" || inputHelp == "h")
+            {
+                Texts.HelpB();
+                Console.ReadKey();
+            }
+        }
         switch (input)
         {
             case "1":
@@ -86,6 +105,20 @@ do // GRA WLASCIWA
         GameScreen();
         Console.WriteLine("Wybierz patyk ( 1, 2, 3 ) na ktorym chcesz polozyc krazek");
         input = Console.ReadLine();
+        if (input == "Q" || input == "q")
+        {
+            return;
+        }
+        if (input == "H" || input == "h")
+        {
+            Texts.HelpA();
+            inputHelp = Console.ReadLine();
+            if (inputHelp == "H" || inputHelp == "h")
+            {
+                Texts.HelpB();
+                Console.ReadKey();
+            }
+        }
         switch (input)
         {
             case "1":
@@ -103,11 +136,6 @@ do // GRA WLASCIWA
 } while (!stick3.SequenceEqual(stick0));
 
 Records.CompareAndSave(choice, movesPlayerCount);
-
-Graphics.GameOver();
-Console.WriteLine($"Potrzebowales az {movesPlayerCount} ruchow aby ulozyc te lamiglowke :-(");
-Console.WriteLine($"Moze sprobujesz jeszcze raz?");
-Console.WriteLine();
 
 // EKRAN GRY
 void GameScreen()

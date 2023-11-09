@@ -15,7 +15,13 @@ namespace HanoiTowers
             Console.WriteLine();
             Console.WriteLine("1. Można przekładać na raz tylko jeden krążek.");
             Console.WriteLine("2. Można brać tylko krążek z samej góry słupka");
-            Console.WriteLine("3. Można układać tylko mniejszy krążek na większym.");
+            Console.WriteLine("3. Można układać tylko mniejszy krążek na większy.");
+            Console.WriteLine();
+            Console.WriteLine("Pamietaj:");
+            Console.WriteLine("=========");
+            Console.WriteLine();
+            Console.WriteLine("W kazdej chwili mozesz przerwac gre wybierajac 'Q'");
+            Console.WriteLine("A jezeli bedziesz potrzebowac pomocy, wybierz 'H'");
             Console.WriteLine();
             Console.WriteLine("Jesli jestes juz gotowy na gre, to nacisnij dowolny klawisz...");
         }
@@ -43,20 +49,25 @@ namespace HanoiTowers
             Console.WriteLine();
             Console.WriteLine("Jesli jednak nadal potrzebujesz pomocy, ponownie nacisnij 'H'.");
             Console.WriteLine("Jesli chcesz powrocic do gry, nacisnij inny, dowolny klawisz.");
+            Console.WriteLine();
         }
         public static void HelpB()
         {
+            Console.WriteLine();
+            Console.WriteLine("Rozwiazanie problemu Wieze Hanoi:");
+            Console.WriteLine("=================================");
             Console.WriteLine();
             Console.WriteLine("1. Przenieś najmniejszy krążek na kolejny słupek (*).");
             Console.WriteLine("2. Wykonaj jedyny możliwy do wykonania ruch, nie zmieniając położenia najmniejszego krążka.");
             Console.WriteLine("3. Powtarzaj powyższe punkty, aż do odpowiedniego ułożenia wszystkich krążków.");
             Console.WriteLine();
             Console.WriteLine("(*) Kolejny słupek zależy od początkowej liczby krążków. Jeśli liczba krążków");
-            Console.WriteLine("jest parzysta, to kolejnym słupkiem jest ten po prawej stronie.Natomiast jeśli");
+            Console.WriteLine("jest parzysta, to kolejnym słupkiem jest ten po prawej stronie.Natomiast, jeśli");
             Console.WriteLine("liczba krążków jest nieparzysta, to kolejnym słupkiem jest ten po lewej stronie.");
-            Console.WriteLine("Kiedy w ten sposób dojdziesz do najdalszego słupka po lewej, to kolejnym będzie już");
-            Console.WriteLine("skrajny z prawej strony.");
+            Console.WriteLine("Kiedy w ten sposób dojdziesz do najdalszego słupka po lewej, to kolejnym będzie");
+            Console.WriteLine("już ten skrajny z prawej strony.");
             Console.WriteLine();
+            Console.WriteLine("Jesli chcesz powrocic do gry, nacisnij dowolny klawisz...");
         }
         public static void RingsRulesPoem()
         {
