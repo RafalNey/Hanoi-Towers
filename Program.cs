@@ -22,7 +22,7 @@ do
             break;
         default:
             Console.WriteLine("Tylko 1 lub 2...");
-            Console.ReadKey();
+            Thread.Sleep(1000);
             break;
     }
 } while (choice != "1" && choice != "2");
@@ -51,7 +51,7 @@ do
             break;
         default:
             Console.WriteLine("Tylko 1, 2 lub 3...");
-            Console.ReadKey();
+            Thread.Sleep(2000);
             break;
     }
 } while (choice != "1" && choice != "2" && choice != "3");
@@ -60,9 +60,9 @@ string input;
 int ring = 0;
 int movesPlayerCount = 0;
 
-do
+do // GRA WLASCIWA
 {
-    do
+    do // Zdejmowanie krazka z patyka
     {
         GameScreen();
         Console.WriteLine("Z ktorego patyka ( 1, 2, 3 ) chcesz wziac krazek?");
@@ -79,7 +79,6 @@ do
                 RemoveRingFromStick(3);
                 break;
         }
-        movesPlayerCount++;
     } while (ring == 0);
 
     do
@@ -103,10 +102,14 @@ do
     GameScreen();
 } while (!stick3.SequenceEqual(stick0));
 
-Console.WriteLine($"Ilosc ruchow: {movesPlayerCount}");
+Records.CompareAndSave(choice, movesPlayerCount);
 
+Graphics.GameOver();
+Console.WriteLine($"Potrzebowales az {movesPlayerCount} ruchow aby ulozyc te lamiglowke :-(");
+Console.WriteLine($"Moze sprobujesz jeszcze raz?");
+Console.WriteLine();
 
-// Ekran gry
+// EKRAN GRY
 void GameScreen()
 {
     Graphics graphics = new Graphics();
@@ -169,10 +172,8 @@ void GameScreen()
     Console.WriteLine();
 }
 
-
-
 // =======================================================
-//               WSZYSTKIE FUNKCJE
+//             WSZYSTKIE INNE FUNKCJE
 // =======================================================
 
 // Budowanie nazwy krazka
@@ -221,13 +222,12 @@ int RemoveRingFromStick(int stickNumber)
     if (stick[0] == 0)
     {
         Texts.Salomon();
-        Console.ReadKey();
+        Thread.Sleep(2000);
         return ring = 0;
     }
     else
     {
         ring = stick[0];
-        Console.WriteLine($"Zdejmujesz krazek {ring} z patyka {stickNumber}");
 
         // Zdejmowanie krazka z patyka
         for (var index = 1; index < stick.Length; index++)
@@ -257,6 +257,7 @@ int RemoveRingFromStick(int stickNumber)
         {
             stick[0] = 0;
         }
+        movesPlayerCount++;
         return ring;
     }
 }
@@ -270,13 +271,11 @@ int PutRingOnStick(int stickNumber)
     if (ring > stick[0] && stick[0] != 0)
     {
         Texts.RingsRulesPoem();
-        Console.ReadKey();
+        Thread.Sleep(4000);
         return ring;
     }
     else
     {
-        Console.WriteLine($"Kladziesz krazek {ring} na patyku {stickNumber}");
-
         // Zmiana indexu patyka
         stick[0] = ring;
 
@@ -307,12 +306,6 @@ int PutRingOnStick(int stickNumber)
                 Console.Clear();
                 Texts.HelpA();
                 break;
-                default:
-                       Console.WriteLine("Jezeli ugrzazles i nie wiesz co zrobic, mozesz zamiast wyboru numeru patyka, nacisnac 'H' aby otrzymac podpowiedz (hint).");
-                       Console.WriteLine("W tej samej chwili mozesz tez zakonczyc gre naciskajac 'Q' (quit).");
-                       Console.WriteLine("Nacisnij dowolny przycisk...");
-                       Console.ReadKey();
-                    break;
             }
         } while (input != "1" && input != "2" && input != "3" && input.ToUpper() != "Q" && input.ToUpper() != "H" || ring == 0);
 

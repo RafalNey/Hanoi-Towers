@@ -1,6 +1,6 @@
 namespace HanoiTowers
 {
-    public class Texts // Komponent tekstowy
+    public class Texts // Komponenty tekstowe
     {
         public static void Instruction()
         {
@@ -16,12 +16,6 @@ namespace HanoiTowers
             Console.WriteLine("1. Można przekładać na raz tylko jeden krążek.");
             Console.WriteLine("2. Można brać tylko krążek z samej góry słupka");
             Console.WriteLine("3. Można układać tylko mniejszy krążek na większym.");
-            Console.WriteLine();
-            Console.WriteLine("Pamietaj:");
-            Console.WriteLine("=========");
-            Console.WriteLine();
-            Console.WriteLine("Jezeli ugrzazles i nie wiesz co zrobic, mozesz nacisnac 'H' aby otrzymac podpowiedz (hint).");
-            Console.WriteLine("W kazdej chwili mozesz tez zakonczyc gre naciskajac 'Q' (quit).");
             Console.WriteLine();
             Console.WriteLine("Jesli jestes juz gotowy na gre, to nacisnij dowolny klawisz...");
         }
