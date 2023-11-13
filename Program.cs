@@ -319,34 +319,3 @@ int PutRingOnStick(int stickNumber)
         return ring = 0;
     }
 }
-
-
-/*
-            input = Console.ReadLine();
-            if (input.ToUpper() == "Q")
-            {
-                Console.Clear();
-                Graphics.GameOver();
-                break;
-            }
-            if (input.ToUpper() == "H")
-            {
-                Console.Clear();
-                Texts.HelpA();
-                break;
-            }
-        } while (input != "1" && input != "2" && input != "3" && input.ToUpper() != "Q" && input.ToUpper() != "H" || ring == 0);
-
-            input = Console.ReadLine();
-            if (input.ToUpper() == "Q")
-            {
-                Graphics.GameOver();
-                break;
-            }
-            else if (input.ToUpper() == "H")
-            {
-                Texts.HelpA();
-                break;
-            }
-        } while (input != "1" && input != "2" && input != "3" && input.ToUpper() != "Q" && input.ToUpper() != "H");
-*/
